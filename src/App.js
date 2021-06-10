@@ -1,25 +1,33 @@
-import logo from './logo.svg';
-import './App.css';
+import React, {useState} from 'react';
+import './assets/css/App.css';
+import './assets/css/Page.css';
+import Header from './components/Header';
+import Footer from './components/Footer';
+import PageMain from './pages/PageMain';
+import PageSearch from './pages/PageSearch';
+import en from './lang/en';
+import ru from './lang/ru';
+import he from './lang/he';
+import {ContextLang} from './context';
 
-function App() {
+const langList = {
+  en: "english",
+  ru: "русский",
+  he: "עברית"
+};
+const page = {en, ru, he};
+
+export default function App() {
+  let [lang, setLang] = useState("en");
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ContextLang.Provider value={{page: page[lang], langs: langList, lang}}>
+      <div className="Page">
+        <Header changeLang={setLang} />
+        <main className="content">
+          <PageSearch />
+        </main>
+        <Footer />
+      </div>
+    </ContextLang.Provider>
   );
 }
-
-export default App;

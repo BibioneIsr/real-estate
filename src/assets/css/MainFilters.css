@@ -1,0 +1,87 @@
+.MainFilters {
+	color: inherit;
+}
+.MainFilters_he {}
+.MainFilters__title {
+	text-align: center;
+	color: inherit;
+	font-size: 18px;
+}
+.MainFilters__content {
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
+}
+.MainFilters_he .MainFilters__content > div:nth-child(1) {
+	order: 3;
+}
+.MainFilters_he .MainFilters__content > div:nth-child(3) {
+	order: -1;
+}
+.MainFilters__content > div {
+	position: relative;
+	min-width: 200px;
+	text-align: center;
+}
+.MainFilters__checkbox {
+	display: none;
+}
+.MainFilters__button {
+	position: relative;
+	display: inline-block;
+	padding: 5px 20px 3px;
+	letter-spacing: 1px;
+	background-color: transparent;
+	border: none;
+	outline: none;
+	color: inherit;
+	border-bottom: 1px solid currentColor;
+	transition: .3s;
+}
+.MainFilters__button:after {
+	content: '';
+	position: absolute;
+	top: 12px;
+	right: 0;
+	border: 4px solid transparent;
+	border-top-color: currentColor;
+	transition: .3s;
+}
+.MainFilters__button:hover,
+.MainFilters__button:focus,
+.MainFilters__checkbox:checked + .MainFilters__button {
+	cursor: pointer;
+	border-bottom-color: transparent;
+}
+.MainFilters__checkbox:checked + .MainFilters__button:after {
+	transform: translateY(-50%) rotate(180deg);
+}
+.MainFilters__checkbox:checked ~ .MainFilters__list,
+.MainFilters__button:hover + .MainFilters__list,
+.MainFilters__list:hover {
+	height: 629px;
+	border-color: #999;
+	border-top-color: transparent;
+}
+.MainFilters__list {
+	position: absolute;
+	top: 100%;
+	left: 0;
+	width: 100%;
+	height: 0;
+	padding: 0;
+	margin: 0;
+	list-style: none;
+	border: 1px solid transparent;
+	background-color: #fff;
+	transition: .3s;
+	z-index: 2;
+	overflow: hidden;
+}
+.MainFilters__item {
+	margin-bottom: 10px;
+}
+.MainFilters__link {
+	color: inherit;
+	text-decoration: none;
+}

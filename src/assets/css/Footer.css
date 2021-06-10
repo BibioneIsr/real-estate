@@ -1,0 +1,143 @@
+.Footer {
+	margin-top: 60px;
+	padding-top: 10px;
+	padding-bottom: 20px;
+	position: relative;
+	color: currentColor;
+}
+.Footer:before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 80%;
+	max-width: 720px;
+	height: 1px;
+	background-color: #ccc;
+}
+.Footer ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+.Footer__row {
+	display: flex;
+	justify-content: space-between;
+}
+.Footer__logo {
+	margin-bottom: 10px;
+	display: block;
+	width: 80px;
+	height: auto;
+}
+.Footer__mail {
+	color: currentColor;
+	text-decoration: none;
+}
+.Footer__social {
+	max-width: 200px;
+	width: 50%;
+}
+.Footer__social > h4 {
+	font-size: 17px;
+	color: #333;
+	text-transform: capitalize;
+}
+.Footer__social > ul {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.Footer__social img {
+	width: 40px;
+	height: auto;
+	transition: .3s;
+}
+.Footer__social img:hover {
+	transform: rotate(-30deg);
+}
+.Footer__center {
+	text-align: center;
+}
+.Footer__apps {
+	margin: 10px auto;
+	max-width: 400px;
+	width: 90%;
+}
+.Footer__apps > h4 {
+	font-size: 17px;
+	color: #333;
+	text-transform: capitalize;
+}
+.Footer__apps > ul {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.Footer__apps a {
+	text-decoration: none;
+}
+.Footer__icon {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	width: 190px;
+	padding: 7px 10px;
+	color: #fff;
+	font-size: 15px;
+	border-radius: 10px;
+	background-color: #111;
+	box-sizing: border-box;
+	transition: .3s;
+	cursor: pointer;
+}
+.Footer__icon > img {
+	width: 35px;
+	height: auto;
+	transition: .3s;
+}
+.Footer__icon > p {
+	margin: 0;
+	text-align: left;
+}
+.Footer__icon__title {
+	font-size: 17px;
+	text-transform: capitalize;
+}
+.Footer__icon:hover {
+	background-color: #333;
+	box-shadow: 0 0 3px #000;
+}
+.Footer__icon:hover > img {
+	transform: scale(1.3);
+}
+.Footer__policy {
+	position: relative;
+	color: currentColor;
+	text-decoration: none;
+	text-transform: capitalize;
+	transition: .5s;
+}
+.Footer__policy:before,
+.Footer__policy:after {
+	content: '';
+	position: absolute;
+	bottom: -10px;
+	left: 50%;
+	width: 0;
+	height: 1px;
+	background-color: #ff887f;
+	transition: .5s;
+}
+.Footer__policy:hover {
+	color: #ff887f;
+}
+.Footer__policy:hover:before {
+	left: -5%;
+	width: 55%;
+}
+.Footer__policy:hover:after {
+	left: 50%;
+	width: 55%;
+}

@@ -1,0 +1,48 @@
+.Fieldset {
+	display: inline-block;
+	color: #0af;
+	padding: 10px;
+	border-radius: 10px;
+	border: 1px solid currentColor;
+}
+.Fieldset_he {}
+.Fieldset_he > .Fieldset__title {
+	text-align: right;
+}
+.Fieldset_he > .Fieldset__list {
+	flex-direction: row-reverse;
+}
+.Fieldset__title {
+	font-size: 17px;
+}
+.Fieldset__list {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	display: flex;
+	font-size: 0;
+}
+.Fieldset__input {
+	display: none;
+}
+.Fieldset__span {
+	margin-left: 5px;
+	display: inline-block;
+	font-size: 14px;
+	padding: 3px 7px;
+	border-radius: 2px;
+	border: 1px solid currentColor;
+	user-select: none;
+	transition: .3s;
+	cursor: pointer;
+}
+.Fieldset__span:first-child {
+	margin-left: 0;
+}
+.Fieldset__span:hover {
+	background-color: #0af3;
+}
+.Fieldset__input:checked + .Fieldset__span {
+	color: #fff;
+	background-color: #0af;
+}
