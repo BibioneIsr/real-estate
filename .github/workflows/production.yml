@@ -31,6 +31,9 @@ jobs:
       env:
         NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
         NETLIFY_SITE_ID: ${{ secrets.PROD_NETLIFY_SITE_ID }}
+      run: |
+        echo "PROD_NETLIFY_SITE_ID: "
+        echo ${{ secrets.PROD_NETLIFY_SITE_ID }}
       with:
         args: deploy --dir=build --prod
         secrets: '["NETLIFY_AUTH_TOKEN", "NETLIFY_SITE_ID"]'
