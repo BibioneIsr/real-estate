@@ -14,11 +14,12 @@ export default function PageSearch() {
 
 
   useEffect(() => {
-    console.log(filters.rooms, filters.type);
+    // console.log(filters.rooms, filters.type);
   }, [filters]);
 
   return (
     <>
+      <div>123</div>
       <Fieldset name="rooms" values={filters.rooms} update={updateFilters} />
       <Fieldset type="radio" name="type" values={filters.type} update={updateFilters} />
     </>
