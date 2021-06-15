@@ -26,6 +26,7 @@ jobs:
       run: |
         yarn install
         yarn test
+        yarn build
     - name: Deploy to netlify
       uses: netlify/actions/cli@master
       env:
@@ -33,7 +34,7 @@ jobs:
         NETLIFY_SITE_ID: ${{ secrets.PROD_NETLIFY_SITE_ID }}
       run: |
         echo "PROD_NETLIFY_SITE_ID: "
-        echo ${{ secrets.PROD_NETLIFY_SITE_ID }}
+        echo env.NETLIFY_AUTH_TOKEN
       with:
         args: deploy --dir=build --prod
         secrets: '["NETLIFY_AUTH_TOKEN", "NETLIFY_SITE_ID"]'
