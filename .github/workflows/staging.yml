@@ -25,6 +25,7 @@ jobs:
     - name: yarn install, build, and test
       run: |
         yarn install
+        yarn build
         yarn test
     - name: Deploy to netlify
       uses: netlify/actions/cli@master
