@@ -17,14 +17,14 @@ const he = {
 	MainCategories: {
 		title: "העסקאות הרלוונטיות ביותר",
 		cards: [
-			{link: "/buy", img: "buy", title: "נכסים למכירה", text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris posuere risus libero, tempor porttitor leo dignissim sit amet.", button: "123"},
-			{link: "/rent", img: "rent", title: "נכסים להשכרה", text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris posuere risus libero, tempor porttitor leo dignissim sit amet.", button: "123"},
-			{link: "/sell", img: "sell", title: "לפרסם מודעה", text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris posuere risus libero, tempor porttitor leo dignissim sit amet.", button: "123"}
+			{link: "/buy", img: "buy", title: "נכסים למכירה", text: "אצלנו תוכלו למצוא בקלות את ההצעות העדכניות ביותר לרכישת נדל\"ן", button: "נכסים למכירה"},
+			{link: "/rent", img: "rent", title: "נכסים להשכרה", text: "באמצעות השירות שלנו תוכלו למצוא נכס להשכרה מתאים בזמן הקצר ביותר", button: "נכסים להשכרה"},
+			{link: "/sell", img: "sell", title: "לפרסם מודעה", text: "המשתמשים בפלטפורמה שלנו מוכרים נדל\"ן מהר יותר", button: "לפרסם מודעה"}
 		]
 	},
 	MainFilters: {
 		title: "המלצות",
-		categories: ["קניה", "להשכרה", "למכירה"],
+		categories: ["לפרסם מודעה", "נכסים להשכרה", "נכסים למכירה"],
 		links: [
 			[{link: "/buy/northern-district", title: "מחוז הצפון"}, {link: "/buy/haifa-district", title: "מחוז חיפה"}, {link: "/buy/tel-aviv-district", title: "מחוז תל אביב"}, {link: "/buy/central-district", title: "מחוז המרכז"}, {link: "/buy/jerusalem-district", title: "מחוז ירושלים"}, {link: "/buy/southern-district", title: "מחוז הדרום"}, {link: "/buy/judea-and-samaria-district", title: "מחוז יהודה ושומרון"}, {link: "/buy/jerusalem", title: "ירושלים"}, {link: "/buy/tel-aviv", title: "תל אביב"}, {link: "/buy/herzliya", title: "הרצליה"}, {link: "/buy/haifa", title: "חיפה"}, {link: "/buy/rishon-lezion", title: "ראשון לציון"}, {link: "/buy/netanya", title: "נתניה"}, {link: "/buy/bat-yam", title: "בת ים"}, {link: "/buy/holon", title: "חולון"}, {link: "/buy/petah-tikva", title: "פתח תקווה"}, {link: "/buy/kfar-saba", title: "כפר סבא"}, {link: "/buy/ashdod", title: "אשדוד"}, {link: "/buy/ashkelon", title: "אשקלון"}, {link: "/buy/eilat", title: "אילת"}],
 			[{link: "/rent/northern-district", title: "מחוז הצפון"}, {link: "/rent/haifa-district", title: "מחוז חיפה"}, {link: "/rent/tel-aviv-district", title: "מחוז תל אביב"}, {link: "/rent/central-district", title: "מחוז המרכז"}, {link: "/rent/jerusalem-district", title: "מחוז ירושלים"}, {link: "/rent/southern-district", title: "מחוז הדרום"}, {link: "/rent/judea-and-samaria-district", title: "מחוז יהודה ושומרון"}, {link: "/rent/jerusalem", title: "ירושלים"}, {link: "/rent/tel-aviv", title: "תל אביב"}, {link: "/rent/herzliya", title: "הרצליה"}, {link: "/rent/haifa", title: "חיפה"}, {link: "/rent/rishon-lezion", title: "ראשון לציון"}, {link: "/rent/netanya", title: "נתניה"}, {link: "/rent/bat-yam", title: "בת ים"}, {link: "/rent/holon", title: "חולון"}, {link: "/rent/petah-tikva", title: "פתח תקווה"}, {link: "/rent/kfar-saba", title: "כפר סבא"}, {link: "/rent/ashdod", title: "אשדוד"}, {link: "/rent/ashkelon", title: "אשקלון"}, {link: "/rent/eilat", title: "אילת"}],
@@ -59,8 +59,8 @@ const he = {
 		type: {
 			title: "סוג העסקה",
 			list: [
-				{title: "השכרה", value: "rent"},
-				{title: "קניה", value: "buy"}
+				{title: "נכסים להשכרה", value: "rent"},
+				{title: "נכסים למכירה", value: "buy"}
 			]
 		}
 	}

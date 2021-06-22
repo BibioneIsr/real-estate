@@ -1,0 +1,55 @@
+.DropDownList {
+    position: relative;
+    vertical-align: top;
+    display: inline-block;
+    width: 200px;
+    height: 34px;
+    border-bottom: 1px solid #aaa;
+    transition: .5s;
+    z-index: 1;
+}
+.DropDownList__current {
+    display: block;
+    padding: 5px;
+    color: #aaa;
+    transition: .3s;
+}
+.DropDownList__list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    height: 0;
+    outline: none;
+    background-color: #fff;
+    overflow: hidden;
+    transition: .5s;
+}
+.DropDownList__list::-webkit-scrollbar { width: 5px; height: 5px; }
+.DropDownList__list::-webkit-scrollbar-button { width: 5px; background-color: #07c; }
+.DropDownList__list::-webkit-scrollbar-track { background-color: #eee; }
+.DropDownList__list::-webkit-scrollbar-thumb { background-color: #0af; border-radius: 1px; transition: .3s; }
+.DropDownList__list::-webkit-scrollbar-thumb:hover { background-color: #3df; cursor: pointer; }
+.DropDownList__list::-webkit-scrollbar-thumb:active { background-color: #09d; }
+.DropDownList__item {
+    padding: 5px 10px;
+    font-size: 15px;
+    color: #0af;
+    cursor: pointer;
+    transition: .3s;
+}
+.DropDownList:hover {
+    border-bottom-color: #0af;
+}
+.DropDownList__current:hover {
+    color: #0af;
+}
+.DropDownList__item:hover {
+    background-color: #0af;
+    color: #fff;
+}
+.DropDownList__list_open,
+.DropDownList__list_hover:hover,
+.DropDownList__current:hover + .DropDownList__list_hover {
+    height: 212px;
+    overflow: auto;
+}

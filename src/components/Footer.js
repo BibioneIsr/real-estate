@@ -1,4 +1,5 @@
 import React, {useContext} from 'react';
+import {Link} from 'react-router-dom';
 import '../assets/css/Footer.css';
 import logo from '../assets/images/logo.svg';
 import logoFacebook from '../assets/images/icons/facebook.svg';
@@ -32,9 +33,9 @@ export default function Footer({changeLang}) {
 						<ul>
 							{list.map((el, i) => (
 								<li key={i}>
-									<a href={el.link} target="_blank">
+									<Link to={el.link} target="_blank">
 										<img src={el.icon} alt="social icon" />
-									</a>
+									</Link>
 								</li>
 							))}
 						</ul>
@@ -46,17 +47,17 @@ export default function Footer({changeLang}) {
 						<ul>
 							{appList.map((el, i) => (
 								<li key={i}>
-									<a href={el.link} target="_blank">
+									<Link to={el.link} target="_blank">
 										<div className="Footer__icon">
 											<img src={el.icon} alt="app icon"/>
 											<p>{data.apps.text}<br /><span className="Footer__icon__title">{el.title}</span></p>
 										</div>
-									</a>
+									</Link>
 								</li>
 							))}
 						</ul>
 					</div>
-					<a className="Footer__policy" href="/privacy-policy">{data.policy}</a>
+					<Link className="Footer__policy" to="/privacy-policy">{data.policy}</Link>
 				</div>
 			</div>
 		</footer>

@@ -1,4 +1,5 @@
 import React, {useContext} from 'react';
+import {Link} from 'react-router-dom';
 import LanguageDropDown from './LanguageDropDown';
 import '../assets/css/Header.css';
 import logo from '../assets/images/logo.svg';
@@ -16,7 +17,7 @@ export default function Header({changeLang}) {
 						{
 							data.leftMenu.map((el, i) =>(
 								<li key={i}>
-									<a href={el.link}>{el.title}</a>
+									<Link to={el.link}>{el.title}</Link>
 								</li>
 							))
 						}
@@ -28,7 +29,7 @@ export default function Header({changeLang}) {
 						{
 							data.rightMenu.map((el, i) =>(
 								<li key={i}>
-									<a href={el.link}>{el.title}</a>
+									<Link to={el.link}>{el.title}</Link>
 								</li>
 							))
 						}
