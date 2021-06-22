@@ -17,9 +17,9 @@ const en = {
 	MainCategories: {
 		title: 'Most relevant deals',
 		cards: [
-			{link: "/buy", img: "buy", title: "Buy", text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris posuere risus libero, tempor porttitor leo dignissim sit amet.", button: "123"},
-			{link: "/rent", img: "rent", title: "Rent", text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris posuere risus libero, tempor porttitor leo dignissim sit amet.", button: "123"},
-			{link: "/sell", img: "sell", title: "Sell", text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris posuere risus libero, tempor porttitor leo dignissim sit amet.", button: "123"}
+			{link: "/buy", img: "buy", title: "Buy", text: "With us you can easily find the most current offers for the purchase of real estate.", button: "Buy"},
+			{link: "/rent", img: "rent", title: "Rent", text: "Using our service, you will be able to find a suitable rental property in the shortest possible time.", button: "Rent"},
+			{link: "/sell", img: "sell", title: "Sell", text: "Users of our platform sell real estate three times faster.", button: "Sell"}
 		]
 	},
 	MainFilters: {
