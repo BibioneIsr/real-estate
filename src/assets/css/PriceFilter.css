@@ -1,0 +1,22 @@
+.PriceFilter {
+	display: inline-block;
+	color: #0af;
+	padding: 10px;
+	border-radius: 10px;
+	border: 1px solid currentColor;
+}
+.PriceFilter_he {}
+.PriceFilter_he > .PriceFilter__title {
+    text-align: right;
+}
+.PriceFilter__list {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+.PriceFilter_he > .PriceFilter__list > div:last-child {
+    order: -1;
+} 
+.PriceFilter__title {
+	font-size: 17px;
+}

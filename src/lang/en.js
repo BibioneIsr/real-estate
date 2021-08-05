@@ -56,12 +56,89 @@ const en = {
 				{title: "4+", value: "4"}
 			]
 		},
+		parking: {
+			title: "Parking",
+			list: [
+				{title: "has Parking", value: "parking"}
+			]
+		},
+		reception: {
+			title: "Reception",
+			list: [
+				{title: "has Reception", value: "reception"}
+			]
+		},
+		storage: {
+			title: "Storage",
+			list: [
+				{title: "has Storage", value: "storage"}
+			]
+		},
+		air_conditioning: {
+			title: "Air conditioning",
+			list: [
+				{title: "has Air conditioning", value: "air-conditioning"}
+			]
+		},
+		pool: {
+			title: "Pool",
+			list: [
+				{title: "has Pool", value: "pool"}
+			]
+		},
+		disabled_access: {
+			title: "Disabled Access",
+			list: [
+				{title: "has Disabled Access", value: "disabled-access"}
+			]
+		},
+		balcony: {
+			title: "Balcony",
+			list: [
+				{title: "has Balcony", value: "balcony"}
+			]
+		},
+		bomb_shelter: {
+			title: "Bomb Shelter",
+			list: [
+				{title: "has Bomb Shelter", value: "bomb-shelter"}
+			]
+		},
+		elevator: {
+			title: "Elevator",
+			list: [
+				{title: "has Elevator", value: "elevator"}
+			]
+		},
+		furniture: {
+			title: "Furniture",
+			list: [
+				{title: "has Furniture", value: "furniture"}
+			]
+		},
+		gym: {
+			title: "Gym",
+			list: [
+				{title: "has Gym", value: "gym"}
+			]
+		},
+		meeting_room: {
+			title: "Meeting Room",
+			list: [
+				{title: "has Meeting Room", value: "meeting-room"}
+			]
+		},
 		type: {
 			title: "Type of deal",
 			list: [
 				{title: "Rent", value: "rent"},
 				{title: "Buy", value: "buy"}
 			]
+		},
+		priceFilter: {
+			title: "Price of deal",
+			titleMin: "From:",
+			titleMax: "To:"
 		}
 	}
 };
