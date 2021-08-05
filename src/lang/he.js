@@ -62,6 +62,11 @@ const he = {
 				{title: "נכסים להשכרה", value: "rent"},
 				{title: "נכסים למכירה", value: "buy"}
 			]
+		},
+		priceFilter: {
+			title: "מחיר",
+			titleMin: "מ:",
+			titleMax: "עד:"
 		}
 	}
 };

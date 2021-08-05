@@ -62,6 +62,11 @@ const ru = {
 				{title: "Аренда", value: "rent"},
 				{title: "Покупка", value: "buy"}
 			]
+		},
+		priceFilter: {
+			title: "Цена сделки",
+			titleMin: "От:",
+			titleMax: "До:"
 		}
 	}
 };

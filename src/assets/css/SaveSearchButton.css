@@ -1,0 +1,13 @@
+.SaveSearchButton {
+    color: #fff;
+    background-color: #00ffad;
+    margin-left: 5px;
+    display: inline-block;
+    font-size: 14px;
+    padding: 3px 7px;
+    border-radius: 2px;
+    border: 1px solid currentColor;
+    user-select: none;
+    transition: .3s;
+    cursor: pointer;
+}
