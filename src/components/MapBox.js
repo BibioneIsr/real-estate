@@ -1,15 +1,45 @@
 import { useState, useEffect } from "react";
+import '../assets/css/MapBox.css';
 
-export default function MapBox({position = [-87.661557, 41.893748], handlerDrag = (()=> {})}) {
+let id = 0;
+function genId() {
+    return "mapBox-" + ++id;
+}
+
+export default function MapBox({handlerDrag = (()=> {}), styles, list=[], openModal, setData}) {
     const [mapBox, setMapBox] = useState(null);
-    const mapboxgl = window.mapboxgl;
-    
+    const [markers, setMarkers] = useState([]);
+    const [controls, setControls] = useState([]);
+    const [mapboxgl, setMapBoxGl] = useState(window.mapboxgl);
+    const mapId = genId();
+
+    const markersData = list.map((ad) => [ad.address.latitude, ad.address.longitude]);
+    let position = {
+        lat: 0, lon: 0
+    };
+    markersData.forEach((marker) => {
+        position.lat += marker[0];
+        position.lon += marker[1];
+    });
+    position.lat = +(position.lat / markersData.length).toFixed(6);
+    position.lon = +(position.lon / markersData.length).toFixed(6);
+    position = Object.values(position);
+
+    const openAd = (ad) => {
+        openModal();
+        setData(ad)
+    };
+
     useEffect(()=> {
         if (mapBox) {
-            addMarkers(mapBox, mapboxgl, [
-                {coords: [-87.661557, 41.893748], color: "#0af5"}
-            ], handlerDrag);
-            mapBox.addControl(new mapboxgl.NavigationControl());
+            clearMap(markers, mapBox, controls);
+            addMarkers(mapBox, mapboxgl, list, openAd, handlerDrag, markers, setMarkers);
+
+            const newControls = [new mapboxgl.NavigationControl()];
+            newControls.forEach(control => {
+                mapBox.addControl(control);
+            });
+            setControls(newControls);
         }
     }, [mapBox]);
 
@@ -18,7 +48,7 @@ export default function MapBox({position = [-87.661557, 41.893748], handlerDrag 
             mapboxgl.accessToken = 'pk.eyJ1IjoiYmliaW9uZSIsImEiOiJja3I0dHA2Z2YwM3NxMnBteWh4NXJ5dnFxIn0.xuf0r4SDoqMecJhV3ClyEA'; 
             setMapBox( 
                 new mapboxgl.Map({
-                    container: 'MapBox',
+                    container: mapId,
                     style: 'mapbox://styles/mapbox/streets-v11', 
                     center: position,
                     zoom: 10.7
@@ -28,20 +58,60 @@ export default function MapBox({position = [-87.661557, 41.893748], handlerDrag 
     }, [])
 
 
-    return <div id="MapBox" style={{height: 512}}></div>;
+    return <div id={mapId} style={styles}></div>;
 }
 
-function addMarkers(map, mapboxgl, markers, handler) {
-    let tempMarker, lngLat;
-    for (const marker of markers) {
-        tempMarker = new mapboxgl.Marker({ color: marker.color, draggable: true})
-        .setLngLat(marker.coords)
+function addMarkers(map, mapboxgl, ads, openAd, handler, arrMarkers, setMarkers) {
+    let marker;
+    const markersNew = [];
+    for (const ad of ads) {
+        marker = new mapboxgl.Marker(customMarker(ad, openAd))
+        .setLngLat([
+            ad.address.latitude,
+            ad.address.longitude
+        ])
         .addTo(map);
 
-        tempMarker.on("dragend", function() {
-            lngLat = this.getLngLat();
-            map.setCenter([lngLat.lng, lngLat.lat]);
-            handler(lngLat.lng, lngLat.lat);
-        })
+        // marker.on("dragend", function() {
+        //     const lngLat = this.getLngLat();
+        //     map.setCenter([lngLat.lng, lngLat.lat]);
+        //     handler(lngLat.lng, lngLat.lat);
+        // });
+        markersNew.push(marker);
     }
+    setMarkers(markersNew);
+}
+function customMarker(ad, openAd) {
+    let previewPhoto = ad.photos[0].src;
+    const photoPreview = ad.photos.filter((photo) => photo.is_preview)[0];
+    if (photoPreview) {
+        previewPhoto = photoPreview.src;
+    }
+
+    const marker = document.createElement("div");
+    marker.className = "MapBox__marker";
+    marker.style.backgroundImage = `url(${previewPhoto})`;
+
+    marker.addEventListener("click", () => {
+        openAd(ad);
+    });
+    marker.addEventListener("mouseenter", () => {
+        marker.classList.add("MapBox__marker--animated");
+        marker.classList.add("MapBox__marker--hovered");
+    });
+    marker.addEventListener("mouseleave", () => {
+        marker.classList.remove("MapBox__marker--hovered");
+        setTimeout(() => {
+            marker.classList.remove("MapBox__marker--animated");
+        }, 700);
+    });
+    return marker;
+}
+function clearMap(markers, map, controls) {
+    markers.forEach(marker => {
+        marker.remove();
+    });
+    controls.forEach(control => {
+        map.removeControl(control);
+    });
 }

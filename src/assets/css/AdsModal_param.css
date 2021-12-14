@@ -1,0 +1,28 @@
+.AdsModal_param_he {
+    display: flex;
+    justify-content: flex-end;
+    text-align: right;
+}
+.AdsModal_param_he .AdsModal_param__text {
+    order: -1;
+}
+.AdsModal_param_he .AdsModal_param__icon {
+    margin-left: 10px;
+    margin-right: 0;
+}
+.AdsModal__list {
+    list-style: none;
+}
+.AdsModal_param--no {
+    opacity: 0.5;
+}
+.AdsModal_param__icon {
+    vertical-align: middle;
+    margin-right: 10px;
+    width: 40px;
+    height: 40px;
+}
+.AdsModal_param__text {
+    vertical-align: middle;
+    font-size: 15px;
+}

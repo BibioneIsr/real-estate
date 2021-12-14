@@ -1,0 +1,51 @@
+.AdsCard {
+    padding-left: 15px;
+}
+.AdsCard__title {
+    font-size: 20px;
+}
+.AdsCard__container {
+    font-size: 0;
+}
+.AdsCard__item {
+    margin-bottom: 10px;
+    vertical-align: top;
+    display: inline-block;
+    width: 48%;
+    box-sizing: border-box;
+}
+.AdsCard__item:nth-child(2n) {
+    margin-left: 4%;
+}
+.AdsCard__item__preview {
+    margin: 0 auto 15px;
+    display: block;
+    width: 100%;
+    height: 100px;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.AdsCard__item__main {
+    width: 100%;
+    padding-left: 10px;
+    border: 1px solid #999;
+    border-top: none;
+    box-sizing: border-box;
+}
+.AdsCard__item__price {
+    font-size: 18px;
+    font-weight: 700;
+    color: #333;
+}
+.AdsCard__item__params {
+    font-size: 15px;
+    margin-bottom: 5px;
+}
+.AdsCard__item__params > span {
+    margin-right: 10px;
+    display: inline-block;
+}
+.AdsCard__item__address {
+    font-size: 16px;
+}

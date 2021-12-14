@@ -2,9 +2,15 @@ import React, {useContext} from 'react';
 import {ContextLang} from '../context';
 import '../assets/css/Fieldset.css';
 
-export default function Fieldset({type="checkbox", name="default", values=[], update}) {
+export default function Fieldset({type="checkbox", name="default", values=[], update, options=[]}) {
 	let {page: data, lang} = useContext(ContextLang);
-	data = data.Fieldset[name];
+	data = data.AdsModal.params[name];
+
+	if(!data) {
+		return null;
+	}
+	console.log(data);
+	console.log(values);
 
 	if(type !== "radio") type = "checkbox";
 
@@ -17,7 +23,9 @@ export default function Fieldset({type="checkbox", name="default", values=[], up
 		}
 		update(name, values);
 	}
+	const bigFirstLetter = text => text[0].toUpperCase() + text.substring(1);
 	const isChecked = val => values.includes(val);
+	const isCheckedText = val => values.includes(val) ? 1 : 0;
 
 	let curClass = "Fieldset";
 	if (lang === "he") {
@@ -26,17 +34,24 @@ export default function Fieldset({type="checkbox", name="default", values=[], up
 
 	return (
 		<fieldset className={curClass}>
-			<legend className="Fieldset__title">{data.title}</legend>
+			<legend className="Fieldset__title">{bigFirstLetter(data.text)}</legend>
 			<ul className="Fieldset__list">
 				{
-					data.list.map((el, i) => {
-						return (
-							<li key={i}><label>
-								<input className="Fieldset__input" type={type} name={name} checked={isChecked(el.value)} onChange={e => changeHandler(el.value, e.target.checked)} />
-								<span className="Fieldset__span">{el.title}</span>
-							</label></li>
-						);
-					})
+					options.length > 0 ?  (
+						options.map((el, i) => {
+							return (
+								<li key={i}><label>
+									<input className="Fieldset__input" type={type} name={name} checked={isChecked(el.value)} onChange={e => changeHandler(el.value, e.target.checked)} />
+									<span className="Fieldset__span">{el.title}</span>
+								</label></li>
+							);
+						})
+					) : (
+						<li key="0"><label>
+							<input className="Fieldset__input" type="checkbox" name={name} checked={isChecked(name)} onChange={e => changeHandler(name, e.target.checked)} />
+							<span className="Fieldset__span">{data[1]}</span>
+						</label></li>
+					)
 				}
 			</ul>
 		</fieldset>

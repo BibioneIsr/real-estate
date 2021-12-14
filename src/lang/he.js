@@ -56,6 +56,78 @@ const he = {
 				{title: "4+", value: "4"}
 			]
 		},
+		parking: {
+			title: "חניה",
+			list: [
+				{title: "עם חניה", value: "חניה"}
+			]
+		},
+		reception: {
+			title: "קבלה",
+			list: [
+				{title: "עם קבלה", value: "קבלה"}
+			]
+		},
+		storage: {
+			title: "מחסן",
+			list: [
+				{title: "עם מחסן", value: "מחסן"}
+			]
+		},
+		air_conditioning: {
+			title: "מזגן",
+			list: [
+				{title: "עם מזגן", value: "מזגן"}
+			]
+		},
+		pool: {
+			title: "בריכה",
+			list: [
+				{title: "עם בריכה", value: "בריכה"}
+			]
+		},
+		disabled_access: {
+			title: "גישה לנכים",
+			list: [
+				{title: "עם גישה לנכים", value: "גישה לנכים"}
+			]
+		},
+		balcony: {
+			title: "מרפסת",
+			list: [
+				{title: "עם מרפסת", value: "מרפסת"}
+			]
+		},
+		bomb_shelter: {
+			title: "ממ\"ד",
+			list: [
+				{title: "עם ממ\"ד", value: "ממ\"ד"}
+			]
+		},
+		elevator: {
+			title: "מעלית",
+			list: [
+				{title: "עם מעלית", value: "מעלית"}
+			]
+		},
+		furniture: {
+			title: "רהוט",
+			list: [
+				{title: "עם רהוט", value: "רהוט"}
+			]
+		},
+		gym: {
+			title: "חדר כושר",
+			list: [
+				{title: "עם חדר כושר", value: "חדר כושר"}
+			]
+		},
+		meeting_room: {
+			title: "חדר ישיבות",
+			list: [
+				{title: "עם חדר ישיבות", value: "חדר ישיבות"}
+			]
+		},
 		type: {
 			title: "סוג העסקה",
 			list: [
@@ -63,10 +135,37 @@ const he = {
 				{title: "נכסים למכירה", value: "buy"}
 			]
 		},
+		
 		priceFilter: {
 			title: "מחיר",
 			titleMin: "מ:",
 			titleMax: "עד:"
+		}
+	},
+	AdsModal: {
+		params: {
+			meters: {text: "בנוי", unit: "m²"},
+			bathrooms: {text: "חדרי אמבטיה", unit: ""},
+			rooms: {text: "חדרים", unit: ""},
+			year: {text: "שנת בנייה", unit: ""},
+			entry_date: {text: "תאריך כניסה", unit: ""},
+			floor: {text: "קומה", unit: ""},
+			floors: {text: " קומות בבנין ", unit: ""},
+			meters_balcony: {text: "מרפסת", unit: "m²"},
+			meters_garden: {text: "גינה", unit: "m²"},
+			conditioner: {text: "מזגן"},
+			elevator: {text: "מעלית"},
+			pool: {text: "בריכה"},
+			parking: {text: "parking", 1: "has parking", 0: "ללא חניה"},
+			new_construction: {text: "construction", 1: "new construction", 0: "old construction"},
+			disabled_people: {text: "access disabled", 1: "yes", 0: "no"},
+			safe_room: {text: "safe room", 1: "yes", 0: "ללא ממ\"ד"},
+			furniture: {text: "רהוט", 1: "מרוהט", 0: "ללא רהוט"},
+			renovated: {text: "renovated", 1: "renovated", 0: "דורש שיפוץ"},
+			water_heater: {text: "water heater", 1: "yes", 0: "ללא דוד שמש"}, 
+			gym: {text: "gym", 1: "has gym", 0: "ללא חדר כושר"}, 
+			storage: {text: "storage", 1: "has storage", 0: "ללא מחסן"}
+			
 		}
 	}
 };

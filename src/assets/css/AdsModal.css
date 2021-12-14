@@ -1,0 +1,200 @@
+.AdsModal {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000a;
+    z-index: 501;
+}
+.AdsModal h3,
+.AdsModal h4,
+.AdsModal p {
+    margin-bottom: 0;
+}
+.AdsModal__close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    text-align: center;
+    line-height: 30px;
+    font-size: 15px;
+    background-color: #1991e6;
+    border: none;
+    color: #eee;
+    border-radius: 5px;
+    box-shadow: 0 0 3px #47a7eb;
+    transition: .3s;
+    cursor: pointer;
+}
+.AdsModal__close:hover {
+    color: #fff;
+    background-color: #47a7eb;
+}
+.AdsModal__content {
+    margin: 30px auto 0;
+    width: 90%;
+    height: 90%;
+    padding: 15px;
+    font-size: 0;
+    background-color: #fff;
+    box-sizing: border-box;
+    box-shadow: 0 0 3px currentColor;
+}
+.AdsModal__slider,
+.AdsModal__info {
+    vertical-align: top;
+    display: inline-block;
+    width: 50%;
+    height: 100%;
+    font-size: 16px;
+    padding: 7px 20px;
+    box-sizing: border-box;
+    overflow-y: auto;
+}
+.AdsModal_he .AdsModal__info {
+    text-align: right;
+}
+.AdsModal__slider {
+    display: inline-grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 15px 15px;
+    border-right: 1px dashed #ddd;
+}
+.AdsModal__slider::-webkit-scrollbar { width: 12px; height: 5px; }
+.AdsModal__slider::-webkit-scrollbar-button { width: 5px; background-color: #07c; }
+.AdsModal__slider::-webkit-scrollbar-track { background-color: #eee; }
+.AdsModal__slider::-webkit-scrollbar-thumb { background-color: #0af; border-radius: 1px; transition: .3s; }
+.AdsModal__slider::-webkit-scrollbar-thumb:hover { background-color: #3df; cursor: pointer; }
+.AdsModal__slider::-webkit-scrollbar-thumb:active { background-color: #09d; }
+
+.AdsModal__info::-webkit-scrollbar { width: 12px; height: 5px; }
+.AdsModal__info::-webkit-scrollbar-button { width: 5px; background-color: #07c; }
+.AdsModal__info::-webkit-scrollbar-track { background-color: #eee; }
+.AdsModal__info::-webkit-scrollbar-thumb { background-color: #0af; border-radius: 1px; transition: .3s; }
+.AdsModal__info::-webkit-scrollbar-thumb:hover { background-color: #3df; cursor: pointer; }
+.AdsModal__info::-webkit-scrollbar-thumb:active { background-color: #09d; }
+
+.AdsModal__slide {
+    width: auto;
+    max-width: 100%;
+    height: auto;
+    border-radius: 15px;
+    transition: .3s;
+    cursor: zoom-in;
+}
+.AdsModal__slide:hover {
+    border-radius: 0;
+    transform: scale(1.1);
+}
+.AdsModal__slide.active {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 0;
+    cursor: zoom-out;
+    box-shadow: 0 0 10px #333;
+    z-index: 1;
+}
+.AdsModal__slide.active:hover {
+    opacity: 0.8;
+    transform: translate(-50%, -50%) scale(0.9);
+}
+.AdsModal__header-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+.AdsModal__logo {
+    width: auto;
+    height: 50px;
+}
+.AdsModal__save {
+    padding: 7px 15px;
+    font-size: 15px;
+    background-color: #1991e6;
+    border: none;
+    color: #eee;
+    border-radius: 5px;
+    box-shadow: 0 0 3px #47a7eb;
+    transition: .3s;
+    cursor: pointer;
+}
+.AdsModal__save:hover {
+    color: #fff;
+    background-color: #47a7eb;
+}
+.AdsModal__title {
+    margin-top: 10px;
+    font-size: 21px;
+    color: currentColor;
+}
+.AdsModal__price {
+    margin-top: 15px;
+    font-size: 18px;
+    color: #777;
+}
+.AdsModal__params {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    font-size: 16px;
+    color: #333;
+}
+.AdsModal_he .AdsModal__params{
+    justify-content: flex-end;
+ }
+.AdsModal__params > span {
+    margin-right: 10px;
+}
+.AdsModal__list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 0;
+}
+.AdsModal__list--2col {
+    grid-template-columns: 1fr 1fr;
+}
+.AdsModal__address {
+    margin-top: 3px;
+    font-size: 17px;
+    color: currentColor;
+}
+.AdsModal__contact {
+    margin-top: 15px;
+    padding: 7px 15px;
+    font-size: 15px;
+    background-color: #1991e6;
+    border: none;
+    color: #eee;
+    border-radius: 5px;
+    box-shadow: 0 0 3px #47a7eb;
+    transition: .3s;
+    cursor: pointer;
+}
+.AdsModal__contact:hover {
+    color: #fff;
+    background-color: #47a7eb;
+}
+.AdsModal__contacts {
+    margin-top: 5px;
+    width: 150px;
+    padding: 7px 20px;
+    border: 1px dashed #1991e6;
+}
+.AdsModal__contacts-item {
+    margin-top: 2px;
+    color: #1991e6;
+    font-size: 17px;
+}
+.AdsModal__description {
+    margin-top: 15px;
+    font-size: 16px;
+    color: #333;
+}

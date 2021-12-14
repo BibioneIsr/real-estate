@@ -1,0 +1,17 @@
+.ClearFiltersButton {
+    color: #fff;
+    background-color: #0eeb0e;
+    margin-left: 5px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    font-size: 14px;
+    padding: 3px 7px;
+    border-radius: 2px;
+    border: 1px solid currentColor;
+    user-select: none;
+    transition: .3s;
+    cursor: pointer;
+}

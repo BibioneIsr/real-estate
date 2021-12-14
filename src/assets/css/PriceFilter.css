@@ -1,9 +1,11 @@
 .PriceFilter {
+	position: relative;
 	display: inline-block;
 	color: #0af;
 	padding: 10px;
 	border-radius: 10px;
 	border: 1px solid currentColor;
+	z-index: 500;
 }
 .PriceFilter_he {}
 .PriceFilter_he > .PriceFilter__title {
