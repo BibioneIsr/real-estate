@@ -140,6 +140,32 @@ const en = {
 			titleMin: "From:",
 			titleMax: "To:"
 		}
+	},
+	AdsModal: {
+		params: {
+			meters: {text: "meters", unit: "m²"},
+			bathrooms: {text: "bathrooms", unit: ""},
+			rooms: {text: "rooms", unit: ""},
+			year: {text: "year built", unit: ""},
+			entry_date: {text: "date of entry", unit: ""},
+			floor: {text: "floor", unit: ""},
+			floors: {text: "floors number", unit: ""},
+			meters_balcony: {text: "balcony meters", unit: "m²"},
+			meters_garden: {text: "garden meters", unit: "m²"},
+			conditioner: {text: "conditioner", 1: "has conditioner", 0: "no conditioner"},
+			elevator: {text: "elevator", 1: "has elevator", 0: "no elevator"},
+			pool: {text: "pool", 1: "has pool", 0: "no pool"},
+			parking: {text: "parking", 1: "has parking", 0: "no parking"},
+			new_construction: {text: "construction", 1: "new construction", 0: "old construction"},
+			disabled_people: {text: "access disabled", 1: "yes", 0: "no"},
+			safe_room: {text: "safe room", 1: "yes", 0: "no"},
+			furniture: {text: "furniture", 1: "has furniture", 0: "no furniture"},
+			renovated: {text: "renovated", 1: "renovated", 0: "needs renovation"},
+			water_heater: {text: "water heater", 1: "yes", 0: "no"}, 
+			gym: {text: "gym", 1: "has gym", 0: "no gym"}, 
+			storage: {text: "storage", 1: "has storage", 0: "no storage"}
+
+		}
 	}
 };
 export default en;

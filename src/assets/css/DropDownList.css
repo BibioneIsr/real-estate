@@ -6,7 +6,7 @@
     height: 34px;
     border-bottom: 1px solid #aaa;
     transition: .5s;
-    z-index: 1;
+    z-index: 100;
 }
 .DropDownList__current {
     display: block;

@@ -6,6 +6,8 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 import PageMain from './pages/PageMain';
 import PageSearch from './pages/PageSearch';
+import PageNewAd from './pages/PageNewAd';
+import {InitFireBase} from './components/utils/FireBase';
 import en from './lang/en';
 import ru from './lang/ru';
 import he from './lang/he';
@@ -21,10 +23,20 @@ const page = {en, ru, he};
 
 export default function App() {
   let [lang, setLang] = useState("en");
+  InitFireBase();
   return (
     <BrowserRouter>
       <ContextLang.Provider value={{page: page[lang], langs: langList, lang, data}}>
         <Switch>
+          <Route path="/new-ad">
+            <div className="Page">
+              <Header changeLang={setLang} />
+              <main className="content">
+                <PageNewAd />
+              </main>
+              <Footer />
+            </div>
+          </Route>
           <Route path="/search">
             <div className="Page">
               <Header changeLang={setLang} />
@@ -34,7 +46,7 @@ export default function App() {
               <Footer />
             </div>
           </Route>
-          <Route path="/">
+          <Route exact path="/">
             <div className="Page">
               <Header changeLang={setLang} />
               <main className="content">
